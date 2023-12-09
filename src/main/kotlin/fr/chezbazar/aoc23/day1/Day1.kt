@@ -11,7 +11,7 @@ fun main() {
     println(input.replaceNumbers().getCalibrations().sum())
 }
 
-fun List<String>.getCalibrations() = this.map { it.filter { c: Char -> c.isDigit() } }.map { it.first().digitToInt() * 10 + it.last().digitToInt() }
+fun List<String>.getCalibrations() = this.map { it.filter { c -> c.isDigit() } }.map { it.first().digitToInt() * 10 + it.last().digitToInt() }
 
 fun List<String>.replaceNumbers() = this.map { it.replace("one", "on1e")
                                                         .replace("two", "tw2o")
