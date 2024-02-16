@@ -19,3 +19,5 @@ fun computeFromIndexed(path: String, action: (index: Int, line: String) -> Unit)
         index++
     }
 }
+
+fun List<String>.inverted() = List(this[0].length) { index -> this.map { it[index] } }.map { String(it.toCharArray()) }
