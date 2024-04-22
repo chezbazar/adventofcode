@@ -1,5 +1,6 @@
 package fr.chezbazar.aoc23.day10
 
+import fr.chezbazar.aoc23.CardinalDirection
 import fr.chezbazar.aoc23.Point
 import fr.chezbazar.aoc23.computeFrom
 
@@ -25,21 +26,21 @@ fun List<MutableList<Pipe>>.findLoop(): List<Point> {
     return loop
 }
 
-fun List<MutableList<Pipe>>.findStart(): Pair<Point, Direction> {
+fun List<MutableList<Pipe>>.findStart(): Pair<Point, CardinalDirection> {
     val y = this.indexOfFirst { it.contains(Pipe.START) }
     val x = this[y].indexOf(Pipe.START)
     // S is not on an edge so not bothering with this case
-    this[y][x] = if (this[y-1][x].connectsTo(Direction.SOUTH) && this[y+1][x].connectsTo(Direction.NORTH)) {
+    this[y][x] = if (this[y-1][x].connectsTo(CardinalDirection.SOUTH) && this[y+1][x].connectsTo(CardinalDirection.NORTH)) {
         Pipe.VERTICAL
-    } else if (this[y][x-1].connectsTo(Direction.EAST) && this[y][x+1].connectsTo(Direction.WEST)) {
+    } else if (this[y][x-1].connectsTo(CardinalDirection.EAST) && this[y][x+1].connectsTo(CardinalDirection.WEST)) {
         Pipe.HORIZONTAL
-    } else if (this[y-1][x].connectsTo(Direction.SOUTH) && this[y][x+1].connectsTo(Direction.WEST)) {
+    } else if (this[y-1][x].connectsTo(CardinalDirection.SOUTH) && this[y][x+1].connectsTo(CardinalDirection.WEST)) {
         Pipe.NORTHEASTBEND
-    } else if (this[y-1][x].connectsTo(Direction.SOUTH) && this[y][x-1].connectsTo(Direction.EAST)) {
+    } else if (this[y-1][x].connectsTo(CardinalDirection.SOUTH) && this[y][x-1].connectsTo(CardinalDirection.EAST)) {
         Pipe.NORTHWESTBEND
-    } else if (this[y+1][x].connectsTo(Direction.NORTH) && this[y][x-1].connectsTo(Direction.EAST)) {
+    } else if (this[y+1][x].connectsTo(CardinalDirection.NORTH) && this[y][x-1].connectsTo(CardinalDirection.EAST)) {
         Pipe.SOUTHWESTBEND
-    } else if (this[y+1][x].connectsTo(Direction.NORTH) && this[y][x+1].connectsTo(Direction.WEST)) {
+    } else if (this[y+1][x].connectsTo(CardinalDirection.NORTH) && this[y][x+1].connectsTo(CardinalDirection.WEST)) {
         Pipe.SOUTHEASTBEND
     } else {
         throw Error()

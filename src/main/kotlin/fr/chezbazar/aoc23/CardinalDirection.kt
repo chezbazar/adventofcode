@@ -1,6 +1,6 @@
-package fr.chezbazar.aoc23.day10
+package fr.chezbazar.aoc23
 
-enum class Direction(val movement: Pair<Int, Int>) {
+enum class CardinalDirection(val movement: Pair<Int, Int>) {
     EAST(1 to 0),
     WEST(-1 to 0),
     NORTH(0 to -1),
