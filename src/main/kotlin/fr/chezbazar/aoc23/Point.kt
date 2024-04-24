@@ -9,4 +9,6 @@ data class Point(val x: Int, val y: Int): RectangularRange(x..x, y..y) {
     operator fun plus(direction: Direction) = this + direction.move
 
     fun distanceTo(other: Point) = abs(x - other.x) + abs(y - other.y)
+
+    fun isPositive() = x >= 0 && y >= 0
 }

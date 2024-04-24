@@ -31,4 +31,7 @@ enum class Direction(val move: Point) {
             RIGHT, LEFT -> listOf(this)
         }
     }
+
+    fun turnRight() = entries[(this.ordinal + 1).mod(entries.size)]
+    fun turnLeft() = entries[(this.ordinal - 1).mod(entries.size)]
 }
