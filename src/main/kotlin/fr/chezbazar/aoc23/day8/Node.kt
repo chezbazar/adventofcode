@@ -1,6 +1,5 @@
 package fr.chezbazar.aoc23.day8
 
-import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentSkipListMap
 
 class Node(val id: String) {

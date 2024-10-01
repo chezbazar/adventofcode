@@ -1,10 +1,10 @@
 package fr.chezbazar.aoc23.day9
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val dataset = mutableListOf<List<Long>>()
-    computeFrom("day9/input.txt") {
+    computeFrom("aoc23/day9/input.txt") {
         dataset.add(it.split(" ").map { it.toLong() })
     }
     println(dataset.sumOf { it.extrapolate() })

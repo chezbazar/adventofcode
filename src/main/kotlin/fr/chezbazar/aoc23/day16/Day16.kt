@@ -2,11 +2,11 @@ package fr.chezbazar.aoc23.day16
 
 import fr.chezbazar.aoc23.Direction
 import fr.chezbazar.aoc23.Point
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val input = mutableListOf<String>()
-    computeFrom("day16/input.txt") { line ->
+    computeFrom("aoc23/day16/input.txt") { line ->
         input.add(line)
     }
     Grid.from(input).apply {

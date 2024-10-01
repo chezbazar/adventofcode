@@ -1,11 +1,11 @@
 package fr.chezbazar.aoc23.day7
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val hands = mutableListOf<Hand>()
     val jokerHands = mutableListOf<HandJoker>()
-    computeFrom("day7/input.txt") {
+    computeFrom("aoc23/day7/input.txt") {
         hands.add(Hand.from(it))
         jokerHands.add(HandJoker.from(it))
     }

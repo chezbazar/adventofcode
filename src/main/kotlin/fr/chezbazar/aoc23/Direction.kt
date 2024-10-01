@@ -34,4 +34,11 @@ enum class Direction(val move: Point) {
 
     fun turnRight() = entries[(this.ordinal + 1).mod(entries.size)]
     fun turnLeft() = entries[(this.ordinal - 1).mod(entries.size)]
+
+    fun toCardinal() = when(this) {
+        RIGHT -> CardinalDirection.EAST
+        LEFT -> CardinalDirection.WEST
+        UP -> CardinalDirection.NORTH
+        DOWN -> CardinalDirection.SOUTH
+    }
 }

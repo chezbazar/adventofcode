@@ -1,12 +1,12 @@
 package fr.chezbazar.aoc21.day1
 
-import fr.chezbazar.aoc21.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val variations = mutableListOf<Int>()
     val allValues = mutableListOf<Int>()
     var currentValue: Int? = null
-    computeFrom("day1/input.txt") { line ->
+    computeFrom("aoc21/day1/input.txt") { line ->
         val newValue = line.toInt()
         allValues.add(newValue)
         if (currentValue != null) {

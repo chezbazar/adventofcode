@@ -1,13 +1,13 @@
 package fr.chezbazar.aoc21.day5
 
 import fr.chezbazar.aoc21.Point
-import fr.chezbazar.aoc21.computeFrom
+import fr.chezbazar.computeFrom
 
 const val arraySize = 1000
 
 fun main() {
     val ranges = mutableListOf<Pair<Point, Point>>()
-    computeFrom("day5/input.txt") {line ->
+    computeFrom("aoc21/day5/input.txt") {line ->
         val (p1, p2) = line.split(" -> ")
         ranges.add(p1.toPoint() to p2.toPoint())
     }

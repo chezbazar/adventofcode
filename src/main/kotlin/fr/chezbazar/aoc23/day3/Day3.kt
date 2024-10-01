@@ -2,11 +2,11 @@ package fr.chezbazar.aoc23.day3
 
 import fr.chezbazar.aoc23.Point
 import fr.chezbazar.aoc23.RectangularRange
-import fr.chezbazar.aoc23.getBufferedReaderFrom
+import fr.chezbazar.getBufferedReaderFrom
 import java.util.stream.Collectors
 
 fun main() {
-    val input = getBufferedReaderFrom("day3/input.txt").lines().collect(Collectors.toList())
+    val input = getBufferedReaderFrom("aoc23/day3/input.txt").lines().collect(Collectors.toList())
     val (numbers, symbols) = input.getData()
     println(numbers.filter { number -> symbols.any { number.isAdjacentTo(it) } }.sumOf { it.number })
     println(symbols.filter { it.isGear() }.sumOf { gear ->

@@ -1,10 +1,10 @@
 package fr.chezbazar.aoc23.day4
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val cards = mutableListOf<Card>()
-    computeFrom("day4/input.txt") {
+    computeFrom("aoc23/day4/input.txt") {
         cards.add(Card.from(it))
     }
     println(cards.sumOf { it.score() })

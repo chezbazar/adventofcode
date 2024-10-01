@@ -1,11 +1,11 @@
 package fr.chezbazar.aoc23.day14
 
-import fr.chezbazar.aoc23.computeFrom
-import fr.chezbazar.aoc23.inverted
+import fr.chezbazar.computeFrom
+import fr.chezbazar.inverted
 
 fun main() {
     val rockMap = mutableListOf<String>()
-    computeFrom("day14/input.txt") {
+    computeFrom("aoc23/day14/input.txt") {
         rockMap.add(it)
     }
     println(rockMap.inverted().sumOf { it.roll().rockLoad() })

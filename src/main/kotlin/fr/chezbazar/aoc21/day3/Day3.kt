@@ -1,6 +1,6 @@
 package fr.chezbazar.aoc21.day3
 
-import fr.chezbazar.aoc21.computeFrom
+import fr.chezbazar.computeFrom
 import kotlin.math.pow
 
 fun main() {
@@ -11,7 +11,7 @@ fun main() {
 fun day3() {
     val ones = MutableList(12) {0}
     val zeros = MutableList(12) {0}
-    computeFrom("day3/input.txt") {
+    computeFrom("aoc21/day3/input.txt") {
         it.forEachIndexed { index, c ->
             when(c) {
                 '0' -> zeros[index]++
@@ -28,7 +28,7 @@ fun day3() {
 
 fun day3PartTwo() {
     val data = mutableListOf<String>()
-    computeFrom("day3/input.txt") {
+    computeFrom("aoc21/day3/input.txt") {
         data.add(it)
     }
     var oxygenGeneratorRating: List<String> = data

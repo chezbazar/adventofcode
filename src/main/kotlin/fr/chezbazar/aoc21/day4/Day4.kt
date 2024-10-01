@@ -1,9 +1,9 @@
 package fr.chezbazar.aoc21.day4
 
-import fr.chezbazar.aoc21.getBufferedReaderFrom
+import fr.chezbazar.getBufferedReaderFrom
 
 fun main() {
-    val bufferedReader = getBufferedReaderFrom("day4/input.txt")
+    val bufferedReader = getBufferedReaderFrom("aoc21/day4/input.txt")
     println("35 0  5".split(" ").filter { it.isNotEmpty() }.map { it.toInt() })
     val numbers = bufferedReader.readLine().split(",").map { it.toInt() }
     val grids = mutableListOf<BingoGrid>()

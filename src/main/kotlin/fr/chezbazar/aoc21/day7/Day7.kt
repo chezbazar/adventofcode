@@ -1,10 +1,10 @@
 package fr.chezbazar.aoc21.day7
 
-import fr.chezbazar.aoc21.getBufferedReaderFrom
+import fr.chezbazar.getBufferedReaderFrom
 import kotlin.math.abs
 
 fun main() {
-    val crabs = getBufferedReaderFrom("day7/input.txt").readLine().split(",").map { it.toInt() }
+    val crabs = getBufferedReaderFrom("aoc21/day7/input.txt").readLine().split(",").map { it.toInt() }
     println(crabs.minimumFuel())
     println(crabs.minimumFuelAdjusted())
 }

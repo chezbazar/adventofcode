@@ -1,9 +1,9 @@
 package fr.chezbazar.aoc23.day6
 
-import fr.chezbazar.aoc23.getBufferedReaderFrom
+import fr.chezbazar.getBufferedReaderFrom
 
 fun main() {
-    val input = getBufferedReaderFrom("day6/input.txt")
+    val input = getBufferedReaderFrom("aoc23/day6/input.txt")
     val times = input.readLine().split(":").last().trim().split(Regex("\\s+")).map { it.toLong() }
     val distances = input.readLine().split(":").last().trim().split(Regex("\\s+")).map { it.toLong() }
     val races = times.mapIndexed { index, time -> Race(time, distances[index]) }

@@ -1,11 +1,11 @@
 package fr.chezbazar.aoc23.day11
 
 import fr.chezbazar.aoc23.Point
-import fr.chezbazar.aoc23.computeFromIndexed
+import fr.chezbazar.computeFromIndexed
 
 fun main() {
     val galaxyMap = mutableListOf<Point>()
-    computeFromIndexed("day11/input.txt") { y, line ->
+    computeFromIndexed("aoc23/day11/input.txt") { y, line ->
         line.forEachIndexed { x, c ->
             if (c == '#') {
                 galaxyMap.add(Point(x, y))

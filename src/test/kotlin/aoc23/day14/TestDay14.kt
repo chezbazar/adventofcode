@@ -4,7 +4,7 @@ import fr.chezbazar.aoc23.day14.performCycle
 import fr.chezbazar.aoc23.day14.performCycles
 import fr.chezbazar.aoc23.day14.rockLoad
 import fr.chezbazar.aoc23.day14.roll
-import fr.chezbazar.aoc23.inverted
+import fr.chezbazar.inverted
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

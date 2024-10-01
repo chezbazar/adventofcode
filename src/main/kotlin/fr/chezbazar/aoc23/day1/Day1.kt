@@ -1,10 +1,10 @@
 package fr.chezbazar.aoc23.day1
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val input = mutableListOf<String>()
-    computeFrom("day1/input.txt") {
+    computeFrom("aoc23/day1/input.txt") {
         input.add(it)
     }
     println(input.getCalibrations().sum())

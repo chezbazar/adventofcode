@@ -1,11 +1,11 @@
 package fr.chezbazar.aoc23.day13
 
-import fr.chezbazar.aoc23.getBufferedReaderFrom
+import fr.chezbazar.getBufferedReaderFrom
 
 fun main() {
     val patterns = mutableListOf<List<String>>()
     var currentPattern = mutableListOf<String>()
-    getBufferedReaderFrom("day13/input.txt").forEachLine { line ->
+    getBufferedReaderFrom("aoc23/day13/input.txt").forEachLine { line ->
         if (line.isEmpty()) {
             patterns.add(currentPattern)
             currentPattern = mutableListOf()

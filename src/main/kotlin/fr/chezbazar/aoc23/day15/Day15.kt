@@ -1,9 +1,9 @@
 package fr.chezbazar.aoc23.day15
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
-    computeFrom("day15/input.txt") { line ->
+    computeFrom("aoc23/day15/input.txt") { line ->
         println(line.split(",").sumOf { it.hash() })
         println(line.focusingPower().mapIndexed { index, map -> (index + 1) * map.focusingPower() }.sum())
     }

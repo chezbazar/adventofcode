@@ -1,6 +1,6 @@
 package fr.chezbazar.aoc21.day2
 
-import fr.chezbazar.aoc21.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     day2()
@@ -10,7 +10,7 @@ fun main() {
 fun day2() {
     var horizontalPosition = 0
     var depth = 0
-    computeFrom("day2/input.txt") {line ->
+    computeFrom("aoc21/day2/input.txt") {line ->
         val (direction, value) = line.split(" ")
         when(direction) {
             "forward" -> horizontalPosition += value.toInt()
@@ -25,7 +25,7 @@ fun day2Part2() {
     var horizontalPosition = 0
     var depth = 0
     var aim = 0
-    computeFrom("day2/input.txt") {line ->
+    computeFrom("aoc21/day2/input.txt") {line ->
         val (direction, value) = line.split(" ")
         when(direction) {
             "forward" -> {

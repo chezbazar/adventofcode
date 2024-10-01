@@ -2,11 +2,11 @@ package fr.chezbazar.aoc23.day10
 
 import fr.chezbazar.aoc23.CardinalDirection
 import fr.chezbazar.aoc23.Point
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 fun main() {
     val map = mutableListOf<MutableList<Pipe>>()
-    computeFrom("day10/input.txt") { line ->
+    computeFrom("aoc23/day10/input.txt") { line ->
         map.add(line.map { Pipe.from(it) }.toMutableList())
     }
     val loop = map.findLoop()

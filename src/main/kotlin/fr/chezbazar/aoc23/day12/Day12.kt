@@ -1,12 +1,12 @@
 package fr.chezbazar.aoc23.day12
 
-import fr.chezbazar.aoc23.computeFrom
+import fr.chezbazar.computeFrom
 
 private val knownCombinations = mutableMapOf<Pair<List<SpringStatus>, List<Int>>, Long>()
 
 fun main() {
     val dataList = mutableListOf<Pair<List<SpringStatus>, List<Int>>>()
-    computeFrom("day12/input.txt") { line ->
+    computeFrom("aoc23/day12/input.txt") { line ->
         dataList.add(getDataFromInputPart2(line))
     }
     println(dataList.sumOf { (statusList, brokenPattern) -> getCombination(statusList, brokenPattern) })
