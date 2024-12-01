@@ -1,4 +1,4 @@
-package day5
+package aoc21.day5
 
 import fr.chezbazar.aoc21.Point
 import fr.chezbazar.aoc21.day5.intersections

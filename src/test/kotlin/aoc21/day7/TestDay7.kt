@@ -1,4 +1,4 @@
-package day7
+package aoc21.day7
 
 import fr.chezbazar.aoc21.day7.minimumFuel
 import fr.chezbazar.aoc21.day7.minimumFuelAdjusted

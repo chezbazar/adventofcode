@@ -1,4 +1,4 @@
-package day6
+package aoc21.day6
 
 import fr.chezbazar.aoc21.day6.generation
 import fr.chezbazar.aoc21.day6.group

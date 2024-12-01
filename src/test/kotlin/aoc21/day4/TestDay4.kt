@@ -1,4 +1,4 @@
-package day4
+package aoc21.day4
 
 import fr.chezbazar.aoc21.day4.BingoGrid
 import fr.chezbazar.aoc21.day4.bingoGame
