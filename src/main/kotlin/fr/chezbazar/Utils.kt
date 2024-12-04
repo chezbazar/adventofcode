@@ -39,3 +39,45 @@ fun <T> List<T>.permutations(): List<List<T>> {
 }
 
 fun <T> Iterable<T>.withoutElementAt(index: Int) = this.filterIndexed { i, _ -> index != i }
+
+fun List<String>.lines() = this
+
+fun List<String>.columns() = List(this.maxOf { it.length }) { index ->
+    this.joinToString("") {
+        if (it.indices.contains(index)) {
+            it[index].toString()
+        } else ""
+    }
+}
+
+fun List<String>.diagonalsRight(): List<String> {
+    val result = mutableListOf<String>()
+    if (this.isEmpty()) {
+        return result
+    }
+    for (j in this[0].lastIndex downTo 0) {
+        var newVal = ""
+        for (i in 0..(this[0].lastIndex - j)) {
+            newVal += this[i][j + i]
+        }
+        result.add(newVal)
+    }
+    for (i in 1..this.lastIndex) {
+        var newVal = ""
+        for (j in 0..(this.lastIndex - i)) {
+            newVal += this[i+j][j]
+        }
+        result.add(newVal)
+    }
+    return result
+}
+
+fun List<String>.diagonalsLeft() = this.map { it.reversed() }.diagonalsRight()
+
+fun String.countOccurrencesOf(substring: String): Int {
+    var result = 0
+    for (i in 0..this.length - substring.length) {
+        if (this.substring(i until i + substring.length) == substring) result++
+    }
+    return result
+}
