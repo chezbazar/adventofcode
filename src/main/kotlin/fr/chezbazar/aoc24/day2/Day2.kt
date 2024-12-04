@@ -1,6 +1,7 @@
 package fr.chezbazar.aoc24.day2
 
 import fr.chezbazar.computeFrom
+import fr.chezbazar.withoutElementAt
 import kotlin.math.abs
 
 fun main() {
@@ -19,6 +20,6 @@ private fun List<Int>.differences() = List(this.size - 1) { index -> this[index 
 
 fun List<Int>.isProblemDampenerSafe() = this.isSafe() || this.allCombinations().any { it.isSafe() }
 
-private fun List<Int>.allCombinations() = List(this.size) { indexMap ->
-    this.filterIndexed { indexFilter, _ -> indexMap != indexFilter }
+private fun List<Int>.allCombinations() = List(this.size) { index ->
+    this.withoutElementAt(index)
 }
