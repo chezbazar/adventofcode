@@ -1,8 +1,8 @@
 package fr.chezbazar.aoc24.day5
 
 class Printer {
-    val rules = mutableListOf<Pair<Int, Int>>()
-    val updates = mutableListOf<List<Int>>()
+    private val rules = mutableListOf<Pair<Int, Int>>()
+    private val updates = mutableListOf<List<Int>>()
 
     fun configLine(line: String) {
         if (line.contains('|')) {
