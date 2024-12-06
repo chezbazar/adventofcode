@@ -7,4 +7,5 @@ fun main() {
     val guardPath = GuardPath.from(entry)
     guardPath.patrol()
     println(guardPath.visitedTiles())
+    println(guardPath.loopingWays())
 }

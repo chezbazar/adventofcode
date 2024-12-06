@@ -13,4 +13,12 @@ class TestDay6 {
         guardPath.patrol()
         assertEquals(41, guardPath.visitedTiles())
     }
+
+    @Test
+    fun testLoops() {
+        val entry = getBufferedReaderFrom("aoc24/day6/input.txt").readLines()
+        val guardPath = GuardPath.from(entry)
+        guardPath.patrol()
+        assertEquals(6, guardPath.loopingWays())
+    }
 }
