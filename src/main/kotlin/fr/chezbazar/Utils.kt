@@ -81,3 +81,5 @@ fun String.countOccurrencesOf(substring: String): Int {
     }
     return result
 }
+
+fun <T> List<T>.pairs(): List<Pair<T, T>> = flatMapIndexed { index, el -> if (index == lastIndex) listOf() else subList(index + 1, size).map { el to it } }
